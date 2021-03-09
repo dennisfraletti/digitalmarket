@@ -1,0 +1,521 @@
+@charset "utf-8";
+
+:root {
+    --roxo: rgba(123, 45, 84, 0.75);
+    --rosa: rgba(215, 77, 119, 1); 
+    --amarelo: rgba(253, 190, 0, 0.75);
+    --laranja: rgba(253, 136, 0, 0.5);
+}
+
+@media screen and (max-width: 1000px) {
+    .conteudo-mercado { grid-template-columns: 1fr !important; }
+
+    .lbl-edit { text-align: left !important; }
+    
+    .campo { grid-template-columns: 1fr !important; }
+
+    .sobre { 
+        margin-left: 0 !important;
+        margin-top: 20px;
+    }
+
+    .logo-mercado {
+        width: 58% !important;
+        height: 58% !important;
+    }
+
+    .radio-partes { grid-template-columns: 1fr !important; } 
+
+    .item-edit button,
+    .item-selected button { font-size: 0.875rem !important; }
+
+    .modal-editar-perfil { width: 100% !important; }
+
+    .conteudo-modal { grid-template-columns: 1fr 3fr !important; }
+
+    .infos-mercado { grid-template-columns: 1fr !important;}
+
+    .perfil { padding: 1; }
+
+    .list-produtos { 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; 
+        margin-right: 3.5% !important;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .bloco-plano {
+        max-width: 95% !important; 
+    }
+}
+
+.conteudo-mercado {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    margin: 3%;
+}
+
+.perfil {
+    border: 1px solid var(--cinzadark);
+    border-radius: 0.5rem;
+    background-color: rgb(253, 253, 253);
+    height: auto;
+    padding: 4%;
+    width: 100%;
+    max-width: 380px;
+}
+
+.logo-mercado {
+    border: 2px solid var(--cinzadark);
+    border-radius: 100rem;
+    width: 90%;
+    max-width: 240px;
+    height: 240px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    pointer-events: none;
+}
+
+.nomefantasia {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #454545;
+    font-weight: 500;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+
+.sobre { margin-left: 40px; }
+
+.titulo-sobre {
+    color: var(--terciaria);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.vendidopela {
+    margin-top: 6%; 
+    margin-left: 3%;
+}
+
+.infos-mercado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cinzadark);
+    margin-top: 18px;
+}
+
+#sp { 
+    display: block; 
+    color: #454545;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.entrou-dm {
+    margin-top: 5px;
+    font-size: 1.25rem;
+    color: var(--principal);
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-info { font-weight: 600; }
+
+button:focus, 
+input:focus,
+textarea:focus { outline: 0; }
+
+.btn-editar {
+    width: 100%;
+    display: block;
+    padding: 3px;
+    color: #777;
+    border: 1.5px solid var(--cinzadark);
+    border-radius: 0.2rem;
+    background-color: transparent;
+}
+
+.btn-editar:hover { 
+    background-color: rgb(248, 248, 248); 
+    color: #666;
+}
+
+.modal-editar-perfil {
+    position: fixed;
+    height: 70vh;
+    max-width: 800px;
+    width: 90%;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid var(--cinzadark);
+    border-radius: 0.15rem;;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 0;
+    transition: 0.5s;
+    left: 50%;
+    bottom: -100%;
+
+}
+
+.bg-alvorecer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .325);
+    z-index: 3;
+    position: fixed;
+}
+
+.fechar-editar, 
+.fechar-cadproduto {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border: transparent;
+    background-color: transparent;
+    font-size: 18pt;
+    color: #777;
+}
+
+.fechar-editar:hover { color: #555; }
+
+.conteudo-modal {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.itens-edit {
+    height: 70vh;
+    border-right: 1px solid var(--cinzadark);
+    overflow-y: auto;
+}
+
+.item-edit {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--cinzadark);
+    cursor: pointer;
+}
+
+.item-edit:hover {
+    background-color: var(--cinza);
+    border-left: 5px solid var(--cinzadark);
+}
+
+.item-edit button, 
+.item-selected button {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #666;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    padding: 5%;
+    padding-left: 12%;
+    text-align: left;
+}
+
+.item-edit button:hover { 
+    color: #666 !important; 
+    padding-left: 14% !important;
+}
+
+.item-selected {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--cinzadark);
+    cursor: default;
+    border-left: 5px solid var(--terciaria);
+}
+
+.item-selected button { cursor: default; }
+
+#edits { 
+    overflow-y: auto;
+    height: 65vh;
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+.btn-salvar {
+    font-weight: 450;
+    background-color: var(--principal) !important;
+    color: white;
+    width: 105px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    position: absolute;
+    right: 0;
+}
+
+.btn-salvar:hover, 
+.btn-salvar:focus {
+    background-color: #2faddf !important;
+}
+
+#edits::-webkit-scrollbar { width: 7.75px; }
+
+#edits::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 20rem;
+}
+
+#edits::-webkit-scrollbar-thumb:hover { background-color: #AAA; }
+
+#edits::-webkit-scrollbar-track { background: var(--cinza); }
+
+.campo { 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 25px;
+}
+
+.lbl-edit {
+    font-weight: 550;
+    color: #454545;
+    font-size: 1.075em;
+    text-align: right;
+    margin-right: 20%;
+
+}
+
+.textbox-edit {
+    padding: 2%;
+    padding-left: 5%;
+    border: 1.5px solid var(--cinzadark);
+    border-radius: 0.35rem;
+    background-color: rgb(252, 252, 252);
+    color: #888;
+    width: 100%;
+}
+
+.textbox-edit:hover,
+.textbox-edit:focus { box-shadow: 3px 3px 5px rgba(235, 235, 235, .8); }
+
+#bio { 
+    max-height: 120px; 
+    min-height: 40px;
+    margin-bottom: 0px !important;
+}
+
+.edit-logo {
+    width: 75px;
+    height: 75px;
+    border: 1.5px solid var(--cinzadark);
+    border-radius: 100rem;
+    pointer-events: none;
+}
+
+.alterar-logo {
+    font-weight: 550;
+    color: var(--principal);
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+.alterar-logo:hover { color: #2faddf; }
+
+#ncelular1,
+#ncelular2 { margin-bottom: 10px; }
+
+.alerta {
+    display: block;
+    font-size: 0.775rem;
+    padding: 0;
+    color: #fe0000;
+}
+
+.btn-celular {
+    border: 1px solid var(--cinzadark);
+    border-top-right-radius: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
+    border-top-left-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    color: white;
+    background-color: var(--principal);
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+}
+
+.plus, .trash { position: relative; }
+
+.plus span, .trash i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-celular:hover {
+    background-color: #2faddf;   
+}
+
+#add-celular:disabled {
+    background-color: #bbb;
+    border-color: #aaa;
+    color: white;
+}
+
+.invisivel { display: none; }
+
+#c-celular1,
+#c-celular2,
+#c-celular3 { 
+    position: relative; 
+    margin-bottom: 18px;
+}
+
+.bio {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #626262;
+    display: block;
+    margin-bottom: 50px;
+}
+
+#text-sn {
+    color: #757575;
+    font-size: 0.85rem;
+}
+
+.textbox-edit:disabled {
+    background-color: var(--cinzadark);
+    color: #757575;
+}
+
+.conta-row {
+    display: grid;
+    grid-template-columns: 20fr 8fr;
+    gap: 12.5px;
+}
+
+.radio-design-checked { background-color: #2faddf !important; }
+
+.lbl-tipoconta-checked {
+    border-color: #2faddf !important;
+    background-color: #2faddf !important;
+}
+
+.bloco-plano {
+    max-width: 75%;
+    margin-left: 50%;
+    transform: translateX(-50%); 
+}
+
+.corpo-bloco { margin-bottom: 30px !important; }
+
+.deletar-conta { 
+    color: var(--principal);
+    font-weight: 500;
+    cursor: pointer;
+    width: 80%;
+    padding: 0 !important;
+    text-align: left;
+    background-color: transparent;
+    border: transparent;
+}
+
+.deletar-conta:hover {
+    color: #2faddf;
+    text-decoration: none;   
+}
+
+.deletar-conta:focus { outline: 0; }
+
+.btn-salvar:disabled {
+    background-color: var(--cinzadark) !important;
+    color: #999 !important;
+}
+
+.add-produto {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--cinzadark);
+    color: #888;
+    height: 40px;
+}
+
+.add-produto:hover {
+    background-color: #fbfbfb;
+    color: #777;
+    box-shadow: 3px 3px 10px var(--cinzadark);
+}
+
+.modal-cadastrar-produto {
+    position: fixed;
+    height: 60vh;
+    max-width: 600px;
+    width: 90%;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid var(--cinzadark);
+    border-radius: 0.15rem;;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 0;
+    transition: 0.5s;
+    left: 50%;
+    bottom: -100%;   
+}
+
+.ola-dono {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 400;
+    padding-bottom: 8px;
+    display: block;
+    border-bottom: 1px solid var(--cinzadark);
+}
+
+.sp-negrito {
+    font-weight: 500;
+    color: var(--principal);
+}
+
+.c-btndelete {
+    position: relative; 
+    margin-top: 42.5px
+}
+
+#botao-5 { width: auto !important; }
+
+.c-senha { 
+    margin-top: 35px; 
+    border-bottom: 1px solid var(--cinzadark);
+    padding-bottom: 50px;
+}
+
+.info-delete {
+    font-size: 0.90rem;
+    color: #ababab;
+}
+
+.input-senha { margin-bottom: 10px; }
+

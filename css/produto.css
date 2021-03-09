@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1100px) {
+    .perfil-prod {
+        grid-template-columns: 6fr 5fr !important;
+    } 
+
+    .img-prod { 
+        width: 90% !important; 
+        height: 90% !important;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .perfil-prod {
+        display: block !important;
+        margin-left: 50% !important;
+        transform: translateX(-50%) !important; 
+    } 
+}
+
+@media screen and (max-width: 700px) {
+    .perfil-prod-esquerda {
+        display: block !important;
+    }
+
+    .img-prod {
+        width: 55% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .list-imagens {
+        height: 140px !important;    
+        width: 100% !important;
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;     
+        white-space: nowrap !important;
+    }
+
+    .perfil-prod-direita {
+        margin-top: 25px !important;
+    }
+
+    .item-img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .list-imagens::-webkit-scrollbar { height: 4px !important; }
+
+}
+
+.conteudo-prod {
+    margin: 3.5%;
+    margin-top: 2%;
+    display: grid;
+    gap: 22.5px;
+    padding-bottom: 0;
+}
+
+.perfil-prod, 
+.comprar-prod {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.img-prod { 
+    width: 80%; 
+    height: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.perfil-prod {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    padding: 3%;
+    padding-left: 2%;
+}
+
+.perfil-prod-esquerda {
+    display: grid;
+    grid-template-columns: 1fr 115px;
+    gap: 10px;
+}
+
+.list-imagens {
+    height: 400px;    
+    padding: 3%;
+    padding-right: 10%;
+    overflow-y: scroll; 
+}
+
+.item-img {
+    width: 100%;
+    margin-bottom: 7.5px;
+    border: 1px solid var(--cinzadark);
+    padding: 1%;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.item-img:hover { border: 1px solid #bcbcbc; }
+
+
+.list-imagens::-webkit-scrollbar { width: 4px; }
+
+.list-imagens::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 20rem;
+}
+
+.list-imagens::-webkit-scrollbar-thumb:hover { background-color: #AAA; }
+
+.list-imagens::-webkit-scrollbar-track { background: var(--cinza); }
+
+.perfil-prod-direita {
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-top: 0; 
+    padding-bottom: 0;
+    position: relative;
+}
+
+.sp-titulo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #757575;
+}
+
+.sp-mercado,
+.sp-mercado a {
+    color: #BCBCBC;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sp-mercado {
+    margin-bottom: 11px;
+}
+
+.sp-mercado:hover a { color: #A9A9A9; }
+
+.sp-preco {
+    text-decoration: line-through;
+    color: #aaa;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.sp-precofinal {
+    color: #656565;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.comprar-prod {
+    padding: 7.5%; 
+    position: relative;
+}
+
+.sp-desconto {
+    margin-left: 12px;
+    color: white;
+    background-color: var(--terciaria);
+    font-size: 1.14rem;
+    border-radius: 0.3rem;
+    padding: 1px;
+    font-weight: 500;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.sp-desconto i { font-size: 0.8rem; }
+
+.btn-comprar {
+    width: 95%;
+    background-color: var(--terciaria);
+    color: white;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 0;
+    border-radius: 0.2rem;
+    display: block;
+    margin-top: 50px;
+}
+
+.confirmar-baixo {
+    padding-left: 7%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.btn-comprar:hover { background-color: #0cb896; }
+
+.btn-comprar:focus { outline: 0; }
+
+.btn-comprar:disabled {
+    background-color: #ccc;
+}
+
+.span-categoria {
+    font-size: 0.85rem;
+    background-color: var(--cinzadark);
+    color: #757575;
+    font-weight: 450;
+    border-radius: 0.3rem;
+    padding: 3px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: auto;
+}
+
+.span-categoria:hover {
+    background-color: #ccc;
+    color: #757575;
+    text-decoration: none;
+}
+
+.sp-estoque {
+    color: rgb(226, 60, 60);
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+#descricao {
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid var(--cinzadark);
+    max-height: 100px;
+    height: 60px;
+    min-height: 50px;
+    padding: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: lighter;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+#descricao:focus { outline: 0; }
+
+.add-desc {
+    font-size: 0.95rem;
+    color: #898989;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.add-desc:hover { color: #888; }
+
+#salvar-desc {
+    position: absolute;
+    right: 0;
+    background-color: var(--principal);
+    color: white;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    border-radius: 0.2rem;
+}
+
+#salvar-desc:hover { background-color: #30B2E3; }
+
+#salvar-desc:focus { outline: 0; }
+
+#fechar-desc {
+    font-size: 1rem;
+    color: #888;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, -25%);
+    background-color: transparent;
+    border: 0;
+}
+
+#fechar-desc:hover { color: #666; }
+
+#fechar-desc:focus { outline: 0; }
+
+#espaco { height: 30px; }
+
+#qtd-caracteres {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #aaa;
+    position: absolute;
+    left: 2px;
+    bottom: 20px;
+}
+
+.link-editar {
+    color: var(--principal);
+    display: block;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.link-editar i { font-size: 1.1rem; }
+
+.link-editar:hover { 
+    color: #30B2E3; 
+    text-decoration: none;
+}

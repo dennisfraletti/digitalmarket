@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.list-produtos,
+.list-mercados,
+.list-categorias {
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+}       
+
+@media screen and (max-width: 1200px) {
+    .menu-lateral { display: none !important; }
+
+    .pagina { grid-template-columns: 1fr 0fr !important; }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    .list-produtos,
+    .list-mercados,
+    .list-categorias {
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+    }       
+}
+
+@media screen and (max-width: 699px) {
+    .list-produtos,
+    .list-mercados,
+    .list-categorias {
+        grid-template-columns: repeat(1, minmax(250px, 1fr)); 
+    }      
+}

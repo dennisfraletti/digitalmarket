@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+@media screen and (max-width: 750px) {
+    .conteudo-pedidos {
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+    }    
+
+    .cabecalho-coluna,
+    .cabecalho-coluna span { font-size: 0.815rem !important; }
+
+        
+    .item-produto {
+        height: 185px !important;
+        padding-top: 10px !important;
+    }
+
+    .imagem-produto,
+    .link-img {
+        height: 115px;
+        width: 115px;
+    }
+    
+    .link-img {
+        margin-top: 10px;
+        margin-left: 7px;
+    }
+
+    .titulo-produto,
+    .titulo-produto a { font-size: 0.95rem !important; }
+
+    .dados-pedido { height: 82.5px !important; }
+
+    .list-produtos { grid-template-columns: 1fr !important; }
+
+    .status { top: 75% !important; }
+     
+    thead td { 
+        height: 85px !important; 
+        padding: 5px !important;
+    }
+}
+
+.conteudo-pedidos {
+    margin-top: -4px;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid var(--cinzadark);
+    border-top: 1px solid var(--cinzadark);
+    height: auto;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    padding: 4%;
+    position: relative;
+}
+
+
+.pedido-vazio {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #656565;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.adicione {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.35rem;
+    color: #767676;
+    line-height: 45px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+
+.voltar-compras {
+    color: var(--principal);
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 50px;
+}
+
+.voltar-compras:hover {
+    color: #30B2E3;
+    text-decoration: none;
+}
+
+.tabela {
+    width: 100%;
+    border-bottom: 0;
+}
+
+.container-tabela {
+    border: 1px solid var(--cinzadark);
+    border-radius: 0.1rem;
+    margin-bottom: 85px;
+}
+
+thead tr {
+    background-color: whitesmoke;
+    color: #a0a0a0;
+    height: 50px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--cinzadark);
+    position: relative;
+}
+
+.cabecalho-coluna span {
+    font-size: 0.9rem !important;
+    font-weight: 500;
+}
+
+.col-1 { width: 29%; }
+.col-2 { width: 22%; }
+.col-3 { width: 31%; }
+.col-4 { width: 18%; }
+
+.item-produto {
+    height: 120px;
+    background-color: white;
+    border-bottom: 1px solid var(--cinzadark);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    padding-top: 6px;
+}
+
+.imagem-produto,
+.link-img {
+    height: 100px;
+    width: 100px;
+}
+
+.link-img {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.titulo-produto,
+.titulo-produto a {
+    color: #808080;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.titulo-produto:hover { 
+    color: #808080 !important;
+    text-decoration: underline; 
+}
+
+.mercado-produto,
+.mercado-produto a {
+    color: #a0a0a0;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.mercado-produto { padding-left: 1px; }
+
+.mercado-produto a:hover {
+    color: #808080 !important;
+    text-decoration: underline;
+}
+
+.preco-unidade {
+    font-size: 0.75rem;
+    color: #707070;
+    font-weight: 400;
+    display: block;
+}
+
+.preco-total {
+    font-size: 0.9rem;
+    color: #656565;
+    font-weight: 500;
+    display: block;
+}
+
+.informacoes-produto { position: relative; }
+
+.precos {
+    position: absolute;
+    bottom: 10px;
+}
+
+body { padding-bottom: 20px; }
+
+
+.traco {
+    border: 1px solid transparent;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+.status-entrega {
+    color: #a0a0a0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 200 !important;
+    font-size: 0.85rem !important; 
+    cursor: default;
+}   
+
+.ok {
+    position: absolute;
+    top: -4px;
+    right: -1px;
+    color: rgb(130, 201, 30) !important;
+    background-color: white !important;
+    font-size: 0.85rem !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 1000rem !important;
+}
+
+
+.titulo-pedidos {
+    color: var(--terciaria);
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+    display: block;
+    border-bottom: 2px dashed #dbdbdb;
+    padding-bottom: 9px;    
+}
+
+.status i {
+    font-size: 1.75rem;
+    width: 100%;
+    text-align: center;
+    color: #c0c0c0;
+    margin-top: 7px;   
+}
+
+.status {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+
+.link-status i {
+    font-size: 1.75rem;
+    width: 100%;
+    text-align: center;
+    color: #c0c0c0;
+    margin-top: 7px;  
+}
+
+.link-status span {
+    color: #a0a0a0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 200 !important;
+    font-size: 0.85rem !important;
+}
+
+.ok-2 {
+    position: absolute;
+    top: -3px;
+    right: 20px;
+    color: rgb(130, 201, 30) !important;
+    background-color: white !important;
+    font-size: 0.85rem !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 1000rem !important;
+}
+
+.dol-1 { 
+    width: 35%; 
+    padding-left: 1%;
+}
+
+.dol-2 { width: 35%; }
+.dol-3 { width: 20%; }
+
+.dol-4 { 
+    width: 10%;
+    position: relative;
+}
+
+.dados-pedido {
+    width: 100%;
+    background-color: whitesmoke;
+    height: 65px;
+    border-top: 1px solid var(--cinzadark);
+    position: relative;
+} 
+
+.pedido-endereco {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+.abc {
+    color: #a0a0a0 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+
+.bcd {
+    color: #a0a0a0 !important;
+    font-weight: 400 !important;
+    font-size: 0.95rem !important;   
+}
+
+.status-entrega {
+    cursor: pointer;
+}

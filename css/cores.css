@@ -1,0 +1,28 @@
+/* definindo cores */
+:root {
+    /* --principal: #00FF9D;
+    --secundaria: #93FFD9;  */
+
+
+    /* --principal: #547BEB;
+    --secundaria: #8557D4;   */
+    
+/*     
+    --principal: #547BEB;
+    --secundaria: #8557D4;    
+    --terciaria: #8F67D4;   */
+     
+ 
+    /* --principal: rgb(55, 0, 60);
+    --secundaria: rgb(92, 1, 100);
+    --terciaria: rgb(56, 219, 143);        */
+
+  
+    --principal: #37C8FF;
+    --secundaria: #09E8BA; 
+    --terciaria: #08C29D;           
+
+    
+    --cinza: #F4F4F4;
+    --cinzadark: #DFDFDF;
+}
